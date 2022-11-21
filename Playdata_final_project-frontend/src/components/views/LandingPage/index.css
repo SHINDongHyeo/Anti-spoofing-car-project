@@ -1,0 +1,19 @@
+#components-layout-demo-side .logo {
+  height: 32px;
+  margin: 16px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.site-layout-background {
+  background: #fff;
+  width: 100%;
+}
+.ant-layout{
+  width: 100%;
+}
+.site-layout .site-layout-background {
+  background: #fff;
+  min-height: 100%;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

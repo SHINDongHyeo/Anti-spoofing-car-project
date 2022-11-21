@@ -1,0 +1,33 @@
+
+
+spring:
+
+
+  datasource:
+    url: 
+    username: 
+    password: 
+    driver-class-name: 
+
+  jpa:
+    defer-datasource-initialization: true
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
+        show_sql: true
+
+  sql:
+    init:
+      mode: always
+
+jwt:
+  header: Authorization
+  #HS512 알고리즘을 사용할 것이기 때문에 512bit, 즉 64byte 이상의 secret key를 사용해야 한다.
+
+  secret: 
+  token-validity-in-seconds: 
+
+server:
+  port: 

@@ -1,0 +1,8 @@
+server {
+  listen 8080;
+  location / {
+    root  /home/ubuntu/frontend_final/build;
+    index  index.html index.htm;
+    try_files $uri /index.html;
+  }
+} 

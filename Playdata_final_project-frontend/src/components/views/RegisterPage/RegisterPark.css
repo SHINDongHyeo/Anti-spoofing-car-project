@@ -1,0 +1,16 @@
+.ant-form-item-control-input-content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 10px;
+width: 200px}
+  ;
+ .ant-input-number-in-form-item{
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 50px;
+width: 200px
+    
+  }
