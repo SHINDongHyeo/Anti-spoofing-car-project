@@ -22,7 +22,7 @@
 2. 테스트용으로 만들어 놓은 `images 폴더`의 차량 이미지들의 경로, 주차장 정보, 차량 번호 정보를 json 형식으로 담아 curl 커맨드 명령어 툴을 이용해 `"ip:포트번호/carin"`으로 전송한다.     
 ex) 해당 커맨드는 `linux`가 아닌 `windows cmd창`에서 작성하여 큰따움표 앞에 \를 붙여서 작성했다.
 ```
-curl -d "{\"accesscarnum\":\"01neo0680\", \"spoofing\":\"False\",  \"park_id\":\"2\"}" -H "Content-Type: application/json" -X GET http://3.37.192.149:5000/carin
+curl -d "{\"accesscarnum\":\"01neo0680\", \"spoofing\":\"False\",  \"park_id\":\"2\"}" -H "Content-Type: application/json" -X GET AWS_EC2_instance주소값/carin
 ```
 
 3. `app.py` 파일의 car_in() 함수가 실행된다. car_in 함수는 먼저 json 형식으로 전송된 위 정보들을 해석하고 변수에 저장한다. 해당 정보들을 이용해 사용할 차량 이미지 경로를 알 수 있고, 이를 `yolov5`의 detect.py 파일의 파라미터로 넣어 실행한다. 마지막에는 결과 이미지를 AWS S3에 전송하고 저장된 url 정보를 받아오기 위한 `my_s3.py`의 함수들을 실행한다. 
